@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ResVO {
+public class ResVo {
 	
     @NonNull
 	private int res_seq; //  방제 순번

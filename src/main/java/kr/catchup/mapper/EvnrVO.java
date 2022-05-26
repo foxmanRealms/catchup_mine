@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class EvnrVO {
+public class EvnrVo {
 	
     @NonNull
 	private int evnr_seq; //  환경 순번

@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ReplyVO {
+public class ReplyVo {
 		
     @NonNull
 	private int rep_seq; //  댓글 순번

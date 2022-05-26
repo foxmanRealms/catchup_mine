@@ -8,17 +8,17 @@ import org.springframework.ui.Model;
 @Mapper
 public interface UserMapper {
 
-	void joinInsert(UserVO vo);
+	void joinInsert(UserVo vo);
 
-	UserVO loginSelect(UserVO vo);
+	UserVo loginSelect(UserVo vo);
 
-	UserVO logout(UserVO vo);
+	UserVo logout(UserVo vo);
 
-	void updateService(UserVO vo);
+	void updateService(UserVo vo);
 
-	List<UserVO> userList();
+	List<UserVo> userList();
 
-	UserVO idCheck(String user_id);
+	UserVo idCheck(String user_id);
 	
 	//public List<BoardVO> boardList();
 

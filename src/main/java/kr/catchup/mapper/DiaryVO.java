@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class DiaryVO {
+public class DiaryVo {
 		
     @NonNull
 	private int diary_seq; //  다이어리 순번

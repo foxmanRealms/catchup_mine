@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class FarmVO {
+public class FarmVo {
 	
     @NonNull
 	private int farm_seq; //  농장 번호

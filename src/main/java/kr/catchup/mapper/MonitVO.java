@@ -14,7 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class MonitVO {
+public class MonitVo {
 		
     @NonNull
 	private int monit_seq; //  모니터링 순번

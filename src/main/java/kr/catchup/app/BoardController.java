@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.catchup.mapper.BoardMapper;
-import kr.catchup.mapper.BoardVO;
-import kr.catchup.mapper.UserVO;
+import kr.catchup.mapper.BoardVo;
+import kr.catchup.mapper.UserVo;
 
 @Controller
 public class BoardController {
@@ -21,13 +21,13 @@ public class BoardController {
 
 	// web/boardList.do라고 요청했을 때 실행되는 메소드
 	@RequestMapping("/boardList.do")
-	public void boardList(Model model,HttpSession session, UserVO vo2) {
+	public void boardList(Model model,HttpSession session, UserVo vo2) {
 		System.out.println("게시판 전체보기 실행");
 
-		List<BoardVO> list = mapper.boardList();
+		List<BoardVo> list = mapper.boardList();
 		model.addAttribute("list", list);
 		
-		vo2 = (UserVO)session.getAttribute("vo1");
+		vo2 = (UserVo)session.getAttribute("vo1");
 				
 		System.out.println(vo2);
 		// 번호, 제목, 내용, 조회수, 작성자, 작성일
@@ -58,7 +58,7 @@ public class BoardController {
 
 	// web/boardInsert.do 라고 요청했을 때 실행되는 메소드
 	@RequestMapping("/boardInsert.do")
-	public String boardInsert(BoardVO vo) {
+	public String boardInsert(BoardVo vo) {
 		System.out.println("글쓰기 기능 실행");
 		System.out.println(vo.toString());
 
@@ -72,7 +72,7 @@ public class BoardController {
 	public void boardContents(int idx, Model model) {
 		System.out.println("글보기 기능 실행");
 		mapper.count(idx);
-		BoardVO vo = mapper.boardContents(idx);
+		BoardVo vo = mapper.boardContents(idx);
 		model.addAttribute("vo", vo);
 		System.out.println("변경");
 
@@ -80,7 +80,7 @@ public class BoardController {
 
 	// web/boardUpdate.do라고 요청했을 때 실행되는 메소드
 	@RequestMapping("/boardUpdate.do")
-	public String boardUpdate(BoardVO vo) {
+	public String boardUpdate(BoardVo vo) {
 		System.out.println("글 수정 기능 실행");
 		mapper.boardUpdate(vo);
 
